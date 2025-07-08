@@ -1,0 +1,42 @@
+.carrossel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+}
+
+.mini-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    height: 166px;
+}
+
+.mini-card1,
+.mini-card2,
+.mini-card3,
+.mini-card4,
+.mini-card5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 160px;
+    height: 118px;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #000;
+}
+
+.news-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 69.5px 48px 69.5px;
+    background-color: #F9FAFB;
+}
+
+.noticias {}
