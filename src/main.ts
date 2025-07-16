@@ -3,6 +3,7 @@ import './styles/header.css'
 import './styles/cards.css'
 import './styles/map.css'
 import './styles/number.css'
+import './styles/evento.css'
 
 // import da função para o mapa interativo
 import { setupMapInteraction } from './interatividade-mapa';
