@@ -1,63 +1,130 @@
 .campi {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 32px;
-    background-color: #15803D;
+    flex-direction: column;
+    background-color: #2d7a3e;
+    padding: 60px 0;
+    min-height: 100vh;
     position: relative;
 }
 
-.campi div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.campi-descricao {
-    height: 660px;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
-    font-size: 16px;
-    color: #FFFFFF;
-}
-
-.mapa {
-    height: 660px;
-    width: 50%;
-    background-color: #15803D;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 8px;
-}
-
-.mapa svg {
-    width: 90%;
-    height: auto;
-}
-
-.campi a {
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
 .campi h1 {
-    font-size: 36px;
+    font-size: 48px;
     font-weight: bold;
     color: #FFFFFF;
     text-align: center;
-    margin-bottom: 24px;
-    position: absolute;
-    top: 16px;
-    left: 50%;
-    transform: translateX(-50%);
+    margin: 0 0 60px 0;
+}
+
+.campi-content {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    gap: 80px;
+    align-items: flex-start;
+}
+
+.campi-descricao {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    color: #FFFFFF;
+}
+
+.campi-descricao p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.campi-links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.campi-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 16px;
+    padding: 8px 0;
+    transition: all 0.3s ease;
+}
+
+.campi-link:hover {
+    transform: translateX(8px);
+    color: #a8e6cf;
+}
+
+.campi-link img {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    filter: brightness(0) invert(1);
+}
+
+.campi-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.campi-cidade {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.campi-stats {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.mapa {
+    width: 70%;
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.mapa img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* --- ESTILOS PARA INTERATIVIDADE DO MAPA --- */
+
+/* Estilo padrão para todas as cidades no SVG */
+.mapa-ro path {
+    fill: #e0e0e0;
+    stroke: #ffffff;
+    stroke-width: 1.5px;
+    transition: fill 0.2s ease-in-out;
+}
+
+/* Estilo para as cidades que são campi */
+.mapa-ro .tem-campus {
+    fill: #008037; /* Seu verde principal */
+    cursor: pointer;
+}
+
+/* Efeito de hover sobre a cidade no mapa */
+.mapa-ro .tem-campus:hover {
+    fill: #00A34A; /* Um tom de verde mais claro */
+}
+
+/* Classe de destaque que o JavaScript usará */
+.mapa-ro .highlight {
+    fill: #ffc107 !important; /* Amarelo destaque */
+}
+
+/* Bônus: Estilo de destaque para o link na lista quando o mouse estiver sobre o mapa */
+a.campi-link.highlight-link {
+    background-color: #f0fdf4; /* Um fundo verde bem sutil */
+    border-left: 3px solid #008037;
 }
