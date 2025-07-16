@@ -29,6 +29,16 @@
     border-radius: 8px;
     text-decoration: none;
     color: #000;
+    transition: all 0.3s ease;
+}
+
+.mini-card1:hover,
+.mini-card2:hover,
+.mini-card3:hover,
+.mini-card4:hover,
+.mini-card5:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .news-block {
@@ -38,5 +48,3 @@
     padding: 48px 69.5px 48px 69.5px;
     background-color: #F9FAFB;
 }
-
-.noticias {}

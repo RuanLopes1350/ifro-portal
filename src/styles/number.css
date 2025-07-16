@@ -1,0 +1,103 @@
+.numeros {
+    height: 394px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 48px;
+    gap: 8px;
+}
+
+.numero-titulo {
+    color: #15803D;
+    font-size: 36px;
+}
+
+.numero-descricao {
+    color: #4B5563;
+    font-size: 20px;
+    text-align: center;
+}
+
+.numero p {
+    font-size: 18px;
+    text-align: center;
+    color: #4B5563;
+}
+
+.cards-numeros {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    height: 166px;
+}
+
+.card-numeros1,
+.card-numeros2,
+.card-numeros3,
+.card-numeros4,
+.card-numeros5,
+.card-numeros6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 180px;
+    height: 120px;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #000;
+    padding: 16px;
+    box-sizing: border-box;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.card-numeros1:hover,
+.card-numeros2:hover,
+.card-numeros3:hover,
+.card-numeros4:hover,
+.card-numeros5:hover,
+.card-numeros6:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-numeros1 img,
+.card-numeros2 img,
+.card-numeros3 img,
+.card-numeros4 img,
+.card-numeros5 img,
+.card-numeros6 img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 8px;
+}
+
+.card-numeros1 h1,
+.card-numeros2 h1,
+.card-numeros3 h1,
+.card-numeros4 h1,
+.card-numeros5 h1,
+.card-numeros6 h1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+    color: #000000;
+}
+
+.card-numeros1 p,
+.card-numeros2 p,
+.card-numeros3 p,
+.card-numeros4 p,
+.card-numeros5 p,
+.card-numeros6 p {
+    font-size: 16px;
+    margin: 4px 0 0 0;
+    text-align: center;
+    color: #666;
+    line-height: 1.2;
+}
