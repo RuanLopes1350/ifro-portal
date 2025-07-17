@@ -58,3 +58,55 @@
     font-weight: bold;
     color: #1F2937;
 }
+
+/* Responsividade Eventos */
+@media (max-width: 768px) {
+    .container-eventos {
+        height: auto;
+        padding: 40px 20px;
+    }
+    
+    .eventos {
+        width: 100%;
+        height: auto;
+        gap: 24px;
+    }
+    
+    .eventos-titulo {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .eventos-titulo h1 {
+        font-size: 24px;
+    }
+    
+    .eventos-lista {
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+    }
+    
+    .evento-card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container-eventos {
+        padding: 30px 15px;
+    }
+    
+    .eventos-titulo h1 {
+        font-size: 20px;
+    }
+    
+    .evento-detalhes {
+        padding: 12px;
+    }
+    
+    .evento-titulo {
+        font-size: 18px;
+    }
+}

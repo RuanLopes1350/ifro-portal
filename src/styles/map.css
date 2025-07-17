@@ -127,3 +127,86 @@ a.campi-link.highlight-link {
     background-color: #00A34A;
     border-left: 3px solid #008037;
 }
+
+/* Responsividade Mapa */
+@media (max-width: 768px) {
+    .campi {
+        padding: 40px 0;
+        min-height: auto;
+    }
+    
+    .campi h1 {
+        font-size: 36px;
+        margin-bottom: 40px;
+    }
+    
+    .campi-content {
+        flex-direction: column;
+        gap: 40px;
+        padding: 0 20px;
+    }
+    
+    .campi-descricao {
+        width: 100%;
+    }
+    
+    .campi-descricao p {
+        font-size: 16px;
+    }
+    
+    .campi-links {
+        gap: 12px;
+    }
+    
+    .campi-link {
+        padding: 12px;
+    }
+    
+    .campi-cidade {
+        font-size: 16px;
+    }
+    
+    .campi-stats {
+        font-size: 13px;
+    }
+    
+    .map-container {
+        width: 100%;
+    }
+    
+    .mapa-ro {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .campi {
+        padding: 30px 0;
+    }
+    
+    .campi h1 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    
+    .campi-content {
+        padding: 0 15px;
+    }
+    
+    .campi-descricao p {
+        font-size: 14px;
+    }
+    
+    .campi-link {
+        padding: 10px;
+    }
+    
+    .campi-cidade {
+        font-size: 14px;
+    }
+    
+    .campi-stats {
+        font-size: 12px;
+    }
+}

@@ -61,3 +61,53 @@
     cursor: pointer;
     color: #ffffff;
 }
+
+/* Responsividade Vídeos */
+@media (max-width: 768px) {
+    .container-videos {
+        height: auto;
+        padding: 40px 20px;
+    }
+    
+    .videos {
+        padding: 0;
+        gap: 24px;
+    }
+    
+    .videos-titulo {
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .videos-titulo h1 {
+        font-size: 24px;
+    }
+    
+    .videos-container {
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .video-card {
+        width: 100%;
+        max-width: 350px;
+        height: 220px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container-videos {
+        padding: 30px 15px;
+    }
+    
+    .videos-titulo h1 {
+        font-size: 20px;
+    }
+    
+    .video-card {
+        max-width: 280px;
+        height: 180px;
+    }
+}

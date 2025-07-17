@@ -94,3 +94,80 @@ header a {
 .search-btn:hover {
     background-color: #F3F4F6;
 }
+
+/* Responsividade Header */
+@media (max-width: 768px) {
+    .header-up {
+        padding-left: 20px;
+        padding-right: 20px;
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .header-up-left {
+        order: 2;
+    }
+    
+    .header-up-right {
+        order: 1;
+        gap: 10px;
+    }
+    
+    .header-mid {
+        padding-left: 20px;
+        padding-right: 20px;
+        flex-direction: column;
+        gap: 15px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    
+    .header-mid-left h1 {
+        font-size: 20px;
+    }
+    
+    .header-mid-left h3 {
+        font-size: 16px;
+    }
+    
+    .search-container input {
+        width: 280px;
+    }
+    
+    .header-down {
+        padding-left: 20px;
+        flex-wrap: wrap;
+        gap: 15px;
+        height: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-up {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .header-mid {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .search-container input {
+        width: 220px;
+        font-size: 14px;
+    }
+    
+    .header-down {
+        padding-left: 15px;
+        gap: 10px;
+    }
+    
+    .header-down a {
+        font-size: 14px;
+    }
+}
