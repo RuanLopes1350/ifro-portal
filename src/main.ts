@@ -12,3 +12,31 @@ import { setupMapInteraction } from './interatividade-mapa';
 
 // Inicializa a interatividade do mapa
 setupMapInteraction();
+
+// Carrossel
+const imagens = [
+  'capa_vinheta.png',
+  'capa_vinheta.png', 
+  'capa_vinheta.png'
+];
+
+let slideAtual = 0;
+
+function mudarSlide(direcao: number) {
+  slideAtual += direcao;
+  
+  if (slideAtual >= imagens.length) {
+    slideAtual = 0;
+  }
+  if (slideAtual < 0) {
+    slideAtual = imagens.length - 1;
+  }
+  
+  const img = document.getElementById('carrossel-img') as HTMLImageElement;
+  if (img) {
+    img.src = imagens[slideAtual];
+  }
+}
+
+// Torna a função global
+(window as any).mudarSlide = mudarSlide;

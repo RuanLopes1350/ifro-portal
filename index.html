@@ -36,7 +36,14 @@
             <h3>Rondônia</h3>
           </div>
         </div>
-        <input type="text" placeholder="Pesquisar..." />
+        <div class="search-container">
+          <input type="text" placeholder="Pesquisar..." />
+          <button class="search-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M21 21L16.514 16.506M19 10.5C19 15.194 15.194 19 10.5 19S2 15.194 2 10.5 5.806 2 10.5 2 19 5.806 19 10.5Z" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
       </div>
 
       <div class="header-down">
@@ -51,7 +58,9 @@
     </header>
 
     <div class="carrossel">
-      CONTEÚDO
+      <button class="prev" onclick="mudarSlide(-1)">❮</button>
+      <img id="carrossel-img" src="capa_vinheta.png">
+      <button class="next" onclick="mudarSlide(1)">❯</button>
     </div>
 
     <div class="mini-cards">
@@ -63,12 +72,41 @@
     </div>
 
     <div class="news-block">
+      <div class="news-header">
+        <h2>Notícias</h2>
+        <a href="#" class="todas-noticias">
+          Todas as notícias
+          <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.25 9H14.75" stroke="#15803D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9.5 3.75L14.75 9L9.5 14.25" stroke="#15803D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
       <div class="noticias">
-        Notícias
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div class="noticia">
+          <img src="noticia-cover.png" alt="Notícia">
+          <div class="data">01/07/2024</div>
+          <h3>IFRO abre edital para professores</h3>
+          <p>Vagas para diversos campi do estado</p>
+        </div>
+        <div class="noticia">
+          <img src="noticia-cover.png" alt="Notícia">
+          <div class="data">30/06/2024</div>
+          <h3>Reunião sobre pesquisa e inovação</h3>
+          <p>Discussão de novas estratégias</p>
+        </div>
+        <div class="noticia">
+          <img src="noticia-cover.png" alt="Notícia">
+          <div class="data">28/06/2024</div>
+          <h3>Comitê de Governança se reúne</h3>
+          <p>Transparência e integridade em pauta</p>
+        </div>
+        <div class="noticia">
+          <img src="noticia-cover.png" alt="Notícia">
+          <div class="data">27/06/2024</div>
+          <h3>Cursos técnicos com inscrições abertas</h3>
+          <p>320 vagas em diversos campi</p>
+        </div>
       </div>
     </div>
 
