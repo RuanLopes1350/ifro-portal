@@ -15,9 +15,10 @@ setupMapInteraction();
 
 // Carrossel
 const imagens = [
-  'capa_vinheta.png',
-  'capa_vinheta.png', 
-  'capa_vinheta.png'
+  'capa_carrossel-1.png',
+  'capa_carrossel-2.jpg', 
+  'capa_carrossel-3.png',
+  'capa_carrossel-4.jpg',
 ];
 
 let slideAtual = 0;

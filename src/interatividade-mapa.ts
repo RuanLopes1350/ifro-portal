@@ -9,19 +9,54 @@ export function setupMapInteraction() {
 
 function initializeMap() {
     console.log('Inicializando interatividade do mapa...');
-    
+
     // Objeto que conecta os IDs dos links <a> com os IDs das cidades <path> no SVG
     const campi = [
-        { linkId: 'link-pvh-calama',      svgId: 'RO-110020' },
-        { linkId: 'link-pvh-zn',          svgId: 'RO-110020' },
-        { linkId: 'link-ariquemes',       svgId: 'RO-110002' },
-        { linkId: 'link-ji-parana',       svgId: 'RO-110012' },
-        { linkId: 'link-cacoal',          svgId: 'RO-110004' },
-        { linkId: 'link-vilhena',         svgId: 'RO-110030' },
-        { linkId: 'link-colorado-oeste',  svgId: 'RO-110006' },
-        { linkId: 'link-guajara-mirim',   svgId: 'RO-110010' },
-        { linkId: 'link-jaru',            svgId: 'RO-110011' }
+        { linkId: 'link-pvh-calama', svgId: 'RO-110020' },
+        { linkId: 'link-pvh-zn', svgId: 'RO-110020' },
+        { linkId: 'link-ariquemes', svgId: 'RO-110002' },
+        { linkId: 'link-ji-parana', svgId: 'RO-110012' },
+        { linkId: 'link-cacoal', svgId: 'RO-110004' },
+        { linkId: 'link-vilhena', svgId: 'RO-110030' },
+        { linkId: 'link-colorado-oeste', svgId: 'RO-110006' },
+        { linkId: 'link-guajara-mirim', svgId: 'RO-110010' },
+        { linkId: 'link-jaru', svgId: 'RO-110011' },
     ];
+
+    const implementacao = [
+        { linkId: 'link-buritis', svgId: 'RO-110045' }
+    ];
+
+    implementacao.forEach(campus => {
+        const linkElement = document.getElementById(campus.linkId) as HTMLAnchorElement
+        const pathElement = document.getElementById(campus.svgId);
+
+        console.log(`Verificando campus em implementação: ${campus.linkId} -> ${campus.svgId}`);
+        console.log('Link encontrado:', linkElement);
+        console.log('Path encontrado:', pathElement);
+
+        if (linkElement && pathElement) {
+            pathElement.classList.add('em-implementacao');
+
+            linkElement.addEventListener('mouseover', () => {
+                pathElement.classList.add('highlight-implementacao');
+            });
+            linkElement.addEventListener('mouseout', () => {
+                pathElement.classList.remove('highlight-implementacao');
+            });
+
+            pathElement.addEventListener('mouseover', () => {
+                const linksToHighlight = document.querySelectorAll(`[data-svg-id='${campus.svgId}']`);
+                linksToHighlight.forEach(link => link.classList.add('highlight-link-implementacao'));
+            });
+            pathElement.addEventListener('mouseout', () => {
+                const linksToHighlight = document.querySelectorAll(`[data-svg-id='${campus.svgId}']`);
+                linksToHighlight.forEach(link => link.classList.remove('highlight-link-implementacao'));
+            });
+
+            linkElement.setAttribute('data-svg-id', campus.svgId);
+        }
+    });
 
     // Verificar se o SVG está presente
     const svgElement = document.querySelector('.mapa-ro');
@@ -42,7 +77,6 @@ function initializeMap() {
 
         // Se ambos os elementos existirem na página...
         if (linkElement && pathElement) {
-            
             // Marca a cidade no mapa com a classe para deixá-la verde
             pathElement.classList.add('tem-campus');
 
@@ -59,13 +93,13 @@ function initializeMap() {
             linkElement.addEventListener('mouseout', () => {
                 pathElement.classList.remove('highlight');
             });
-            
+
             // Passa o mouse na cidade do mapa -> destaca o(s) link(s) na lista
             pathElement.addEventListener('mouseover', () => {
                 const linksToHighlight = document.querySelectorAll(`[data-svg-id='${campus.svgId}']`);
                 linksToHighlight.forEach(link => link.classList.add('highlight-link'));
             });
-             pathElement.addEventListener('mouseout', () => {
+            pathElement.addEventListener('mouseout', () => {
                 const linksToHighlight = document.querySelectorAll(`[data-svg-id='${campus.svgId}']`);
                 linksToHighlight.forEach(link => link.classList.remove('highlight-link'));
             });

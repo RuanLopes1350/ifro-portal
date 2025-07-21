@@ -101,3 +101,109 @@
     color: #666;
     line-height: 1.2;
 }
+
+/* Responsividade Numbers */
+@media (max-width: 768px) {
+    /* Seção números */
+    .numeros {
+        height: auto;
+        padding: 30px 15px;
+        gap: 20px;
+    }
+    
+    .numero-titulo {
+        font-size: 28px;
+    }
+    
+    .numero-descricao {
+        font-size: 18px;
+    }
+    
+    /* Cards números */
+    .cards-numeros {
+        flex-wrap: wrap;
+        gap: 12px;
+        height: auto;
+        padding: 20px;
+    }
+    
+    .card-numeros1,
+    .card-numeros2,
+    .card-numeros3,
+    .card-numeros4,
+    .card-numeros5,
+    .card-numeros6 {
+        width: 160px;
+        height: 110px;
+        padding: 12px;
+    }
+    
+    .card-numeros1 h1,
+    .card-numeros2 h1,
+    .card-numeros3 h1,
+    .card-numeros4 h1,
+    .card-numeros5 h1,
+    .card-numeros6 h1 {
+        font-size: 26px;
+    }
+    
+    .card-numeros1 p,
+    .card-numeros2 p,
+    .card-numeros3 p,
+    .card-numeros4 p,
+    .card-numeros5 p,
+    .card-numeros6 p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Seção números */
+    .numeros {
+        padding: 20px 15px;
+    }
+    
+    .numero-titulo {
+        font-size: 24px;
+    }
+    
+    .numero-descricao {
+        font-size: 16px;
+    }
+    
+    /* Cards números */
+    .cards-numeros {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .card-numeros1,
+    .card-numeros2,
+    .card-numeros3,
+    .card-numeros4,
+    .card-numeros5,
+    .card-numeros6 {
+        width: 280px;
+        max-width: 90%;
+        height: 90px;
+        padding: 16px;
+    }
+    
+    .card-numeros1 h1,
+    .card-numeros2 h1,
+    .card-numeros3 h1,
+    .card-numeros4 h1,
+    .card-numeros5 h1,
+    .card-numeros6 h1 {
+        font-size: 24px;
+    }
+    
+    .card-numeros1 p,
+    .card-numeros2 p,
+    .card-numeros3 p,
+    .card-numeros4 p,
+    .card-numeros5 p,
+    .card-numeros6 p {
+        font-size: 13px;
+    }
+}
