@@ -41,6 +41,10 @@
     gap: 24px;
 }
 
+.evento-card img {
+    cursor: pointer;
+}
+
 .evento-card {
     background-color: #ffffff;
     border-radius: 8px;
@@ -57,6 +61,7 @@
     font-size: 20px;
     font-weight: bold;
     color: #1F2937;
+    cursor: pointer;
 }
 
 /* Responsividade Eventos */
